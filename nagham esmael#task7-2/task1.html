@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 13 Pro Max</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: gold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .iphone-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .iphone {
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .iphone img {
+            width: 150px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .iphone:hover img {
+            transform: scale(1.1);
+        }
+
+        #selected-iphone {
+            width: 500px;
+            margin-left: 20px;
+            border-radius: 10px;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container">
+            <h1>iPhone 13 Pro Max</h1>
+            <img id="selected-iphone"
+                src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-iphone-13-pro-max-gold-2023?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1679072988850"
+                alt="Selected iPhone">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis justo sit amet nisi consequat
+                tincidunt.
+                Nullam sodales urna id tellus placerat, ac bibendum neque varius. Vivamus sagittis eros non
+                ultricies
+                tristique. Nullam consectetur arcu vel urna tincidunt, nec fermentum neque ullamcorper.</p>
+        </div>
+        <div class="iphone-list">
+            <div class="iphone" onclick="changeBackground('gold')">
+                <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-iphone-13-pro-max-gold-2023?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1679072988850"
+                    alt="Gold iPhone 13 Pro Max">
+            </div>
+            <div class="iphone" onclick="changeBackground('cyan')">
+                <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-iphone-13-pro-max-blue-2023?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1679072989205"
+                    alt="Cyan iPhone 13 Pro Max">
+            </div>
+            <div class="iphone" onclick="changeBackground('black')">
+                <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-iphone-13-pro-max-graphite-2023?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1679072989055"
+                    alt="Black iPhone 13 Pro Max">
+            </div>
+            <div class="iphone" onclick="changeBackground('white')">
+                <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/refurb-iphone-13-pro-max-silver-2023?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1679072987085"
+                    alt="White iPhone 13 Pro Max">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function changeBackground(color) {
+            document.body.style.color = color === 'black' || color === 'red' ? '#fff' : '#333';
+            document.body.style.backgroundColor = color;
+
+        }
+    </script>
+</body>
+
+</html>

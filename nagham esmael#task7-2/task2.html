@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .dark-mode {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .centered-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    #dark-mode-toggle i {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container centered-container">
+    <h1>Hello World</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis justo sit amet nisi consequat tincidunt.
+      Nullam sodales urna id tellus placerat, ac bibendum neque varius. Vivamus sagittis eros non ultricies tristique.
+      Nullam consectetur arcu vel urna tincidunt, nec fermentum neque ullamcorper. Morbi rhoncus consequat nisi, eget
+      magna volutpat metus, a rhoncus dolor nunc at ligula.</p>
+  </div>
+
+  <div id="dark-mode-toggle" class="position-fixed" style="top: 20px; left: 20px;">
+    <i class="far fa-moon fa-3x"></i>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#dark-mode-toggle').click(function () {
+        $('body').toggleClass('dark-mode');
+        $('#dark-mode-toggle i').toggleClass('far fas');
+      });
+    });
+  </script>
+</body>
+
+</html>

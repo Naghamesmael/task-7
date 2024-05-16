@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rate Your Experience</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #023852;
+      color: #fff;
+    }
+    .centered-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+    .stars {
+      font-size: 36px;
+    }
+    .star {
+      cursor: pointer;
+      color: #001F34; /* Unselected star color */
+    }
+    .star.filled {
+      color: #ffc107; /* Yellow color when selected */
+    }
+    p {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container centered-container">
+    <h1 class="text-center">How was your experience?</h1>
+    <div class="stars">
+      <span class="star" onclick="rate(1)">★</span>
+      <span class="star" onclick="rate(2)">★</span>
+      <span class="star" onclick="rate(3)">★</span>
+      <span class="star" onclick="rate(4)">★</span>
+      <span class="star" onclick="rate(5)">★</span>
+    </div>
+    <p id="ratingText" class="text-center">It's awesome!</p>
+  </div>
+
+  <script>
+    function rate(rating) {
+      const stars = document.querySelectorAll('.star');
+      stars.forEach((star, index) => {
+        if (index < rating) {
+          star.classList.add('filled');
+        } else {
+          star.classList.remove('filled');
+        }
+      });
+
+      const ratingText = document.getElementById('ratingText');
+      switch (rating) {
+        case 1:
+          ratingText.textContent = "Hated it!";
+          break;
+        case 2:
+          ratingText.textContent = "Didn't like it";
+          break;
+        case 3:
+          ratingText.textContent = "It's OK";
+          break;
+        case 4:
+          ratingText.textContent = "Liked it";
+          break;
+        case 5:
+          ratingText.textContent = "It's awesome!";
+          break;
+        default:
+          ratingText.textContent = "It's awesome!";
+          break;
+      }
+    }
+  </script>
+</body>
+</html>
